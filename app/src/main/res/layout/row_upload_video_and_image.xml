@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.beanstringnew.Controller.GridImage
+        android:id="@+id/second_image_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:background="@drawable/photo"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rr_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:scaleType="fitXY"
+            android:id="@+id/main_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_160dp"
+            android:layout_margin="@dimen/_5dp" />
+
+
+        <ImageView
+            android:id="@+id/iv_play"
+            android:layout_width="@dimen/_50dp"
+            android:layout_height="@dimen/_50dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/play_button"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="@dimen/_35dp"
+            android:layout_height="@dimen/_35dp"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/my_progress_indeterminate" />
+
+        <LinearLayout
+            android:id="@+id/ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/login_green_color"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_25dp"
+                android:layout_height="@dimen/_25dp"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:src="@drawable/mybeans" />
+
+            <TextView
+                android:id="@+id/tot_beans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5dp"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12_sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/del_post"
+            android:layout_width="@dimen/_20dp"
+            android:layout_height="@dimen/_20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/closee"
+            android:layout_margin="@dimen/_5dp"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

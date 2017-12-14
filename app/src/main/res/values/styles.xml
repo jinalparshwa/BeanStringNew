@@ -1,0 +1,31 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+
+    <style name="spinner_style">
+        <item name="android:background">@drawable/spinner_bg</item>
+        <item name="android:layout_marginLeft">@dimen/_5dp</item>
+        <!--<item name="android:paddingLeft">@dimen/_7dp</item>-->
+    </style>
+
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="CustomTabPageIndicator" parent="android:TextAppearance.Medium">
+        <item name="android:textColor">@drawable/tab_text_color</item>
+        ...
+    </style>
+
+
+</resources>

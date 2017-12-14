@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+
+    <color name="colorPrimary">#6a9a10</color>
+    <color name="colorPrimaryDark">#517a02</color>
+
+    <color name="colorAccent">#6a9a10</color>
+
+    <color name="login_green_color">#6a9a10</color>
+    <color name="login_dark_color">#2d2d2d</color>
+    <color name="login_edit_text_border">#cccccc</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+
+    <color name="dashboard_gray">#f0f0f0</color>
+    <color name="gray_button">#7C7C72 </color>
+
+    <color name="my_profile_title_background">#d9e9b9</color>
+    <color name="my_profile_button_background">#517a02</color>
+
+    <color name="yellow_background">#e4eb68</color>
+    <color name="light_gray">#7B7D89</color>
+    <color name="dark_gray">#626672</color>
+    <color name="green_color_text">#B2D833</color>
+
+    <color name="green_text">#82a91d</color>
+    <color name="gray_buttonn">#EDEDED</color>
+    <color name="gray_icon">#D4D4D4</color>
+
+
+    <color name="eyeslidebg">#e6ecf0</color>
+    <color name="clickmebg">#e6e5e5</color>
+
+    <color name="Red">#eb2629</color>
+    <color name="search_bg">#edecec</color>
+</resources>

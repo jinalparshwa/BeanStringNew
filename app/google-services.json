@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1090091838290",
+    "firebase_url": "https://beanstring-65086.firebaseio.com",
+    "project_id": "beanstring-65086",
+    "storage_bucket": "beanstring-65086.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090091838290:android:46dc05955ddd6212",
+        "android_client_info": {
+          "package_name": "com.beanstringnew"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090091838290-hc04cbbb4bk9rjptnr95i05ej2osk07i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvo-xED8cTmqdPcthNk4nv4GENfYlRIog"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

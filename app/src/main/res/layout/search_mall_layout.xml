@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10dp"
+        android:layout_marginRight="@dimen/_10dp"
+        android:layout_marginTop="@dimen/_10dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Search..."
+            android:paddingBottom="@dimen/_10dp"
+            android:paddingLeft="@dimen/_10dp"
+            android:paddingTop="@dimen/_10dp"
+            android:textSize="@dimen/_12_sp" />
+
+        <ImageView
+            android:layout_width="@dimen/_10dp"
+            android:layout_height="@dimen/_10dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_10dp"
+            android:src="@drawable/search_dark" />
+
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5dp"
+        android:text="Search"
+        android:textSize="@dimen/_12_sp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/first">
+
+        <TextView
+            android:id="@+id/notext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="No Item Found"
+            android:visibility="gone" />
+
+        <GridView
+            android:id="@+id/product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2" />
+    </RelativeLayout>
+
+
+</LinearLayout>

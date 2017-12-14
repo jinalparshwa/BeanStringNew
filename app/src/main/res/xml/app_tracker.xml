@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- End current session if app sleeps for a period of time -->
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <!-- Enable automatic Activity measurement -->
+    <bool name="ga_autoActivityTracking">true</bool>
+
+    <!--  The property id associated with this analytics tracker -->
+    <string name="ga_trackingId">UA-106756618-1</string>
+    <!--<string name="ga_trackingId">UA-106800702-1</string>-->
+
+    <string name="ga_sampleFrequency">100.0</string>
+
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="com.beanstringnew.Activity.SplashActivity">Splash Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Home_Social">Home Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.About_Beanstring">About Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Add_photo_activity">Add Photo Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Advertise_guidelines">Advertise Guidelines Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.AdvertiseActivity">Advertise Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Beanstring_policy">Beanstring Policy Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Change_password">Change Password Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Changepwd">Change Password Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Comment_Display_activity">Comment Display Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Follower_list_activity">Follower Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Following_list_activity">Following Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.ForgotPasswordActivity">Forgot Password Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Higest_beans_list">Higest Beans Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Login">Login Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Mall_home_activity">Mall Home Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.My_Beans_Activity_new">My Beans Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.My_profile_activity">My Profile Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.MyPost_activity">My Post Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Notification_activity">Notification Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Open_photo_video_activity">Open photo/Video
+        Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Other_Profile_activity">Other Profile Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.OTPActivity">OTP Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Page_guidelines">Page Guidelines Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Photo_activity">Photo Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Play_video_activity">Play Video Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Privacy_policy">Privacy Policy Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Product_details_activity">Product Details Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Profile_follower_list">Profile Follower Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Profile_Following_list">Profile Following Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Registration">Registration Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Search_activity">Search Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Terms_conditions">Terms and Condition Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.Thank_youActivity">Thank you Screen</screenName>
+    <screenName name="com.beanstringnew.Activity.Upload_image_and_video_activity">My Photos/Video
+        Screen
+    </screenName>
+    <screenName name="com.beanstringnew.Activity.ViewOrder_activity">Order Detail Screen
+    </screenName>
+
+    <!--
+      See Project Structure -> Analytics -> Google Analytics -> Learn More
+      to learn more about configuring this file.
+    -->
+</resources>

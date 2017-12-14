@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/open_photo_video_activity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.beanstringnew.Activity.Open_photo_video_activity">
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/login_green_color"
+        android:padding="@dimen/__3dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/back" />
+
+        <ImageView
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_white_new" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="@dimen/_40dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/ic_more"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:layout_below="@+id/title"
+        android:background="@color/dashboard_gray">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/title"
+                android:background="@color/dashboard_gray"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:scaleType="fitXY"
+                        android:id="@+id/profilepic"
+                        android:layout_width="@dimen/_30dp"
+                        android:layout_height="@dimen/_30dp"
+                        android:layout_margin="@dimen/_5dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_5dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/list_fname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/login_green_color"
+                                android:textSize="@dimen/_12_sp" />
+
+                            <TextView
+                                android:id="@+id/list_lname"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/__3dp"
+                                android:text=""
+                                android:textColor="@color/login_green_color"
+                                android:textSize="@dimen/_12_sp" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/_12_sp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/list_post"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10dp"
+                    android:text=""
+                    android:textSize="@dimen/_12_sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rr_lat"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_340dp">
+
+                    <ImageView
+                        android:id="@+id/displayimage"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_340dp" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/login_green_color"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/_25dp"
+                            android:layout_height="@dimen/_25dp"
+                            android:layout_marginBottom="1dp"
+                            android:layout_marginTop="1dp"
+                            android:src="@drawable/mybeans" />
+
+                        <TextView
+                            android:id="@+id/tot_beans"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/_5dp"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_12_sp" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_play"
+                        android:layout_width="@dimen/_50dp"
+                        android:layout_height="@dimen/_50dp"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/play_button"
+                        android:visibility="gone" />
+
+                    <ImageView
+                        android:id="@+id/list_upload"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_340dp"
+                        android:layout_alignBottom="@+id/linearLayout"
+                        android:layout_alignLeft="@+id/linearLayout"
+                        android:layout_alignStart="@+id/linearLayout" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_beans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="@dimen/_10dp"
+                    android:background="@color/login_green_color"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/_25dp"
+                        android:layout_height="@dimen/_25dp"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginTop="1dp"
+                        android:src="@drawable/mybeans" />
+
+                    <TextView
+                        android:id="@+id/tott_beans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_5dp"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12_sp" />
+
+                </LinearLayout>
+
+
+                <ListView
+                    android:id="@+id/comment_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:divider="@null" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/ll_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_10dp"
+        android:background="@drawable/edit_text_background">
+
+        <ImageView
+            android:id="@+id/bottom_pro"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_5dp" />
+
+        <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_5dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Write Comment "
+            android:textSize="@dimen/_12_sp" />
+
+
+        <ImageView
+            android:id="@+id/send_post"
+            android:layout_width="@dimen/_30dp"
+            android:layout_height="@dimen/_30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/_5dp"
+            android:src="@drawable/send" />
+
+    </LinearLayout>
+
+</RelativeLayout>

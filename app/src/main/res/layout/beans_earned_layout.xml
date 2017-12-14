@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background">
+
+                <EditText
+                    android:id="@+id/startdate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/date"
+                    android:gravity="center"
+                    android:hint="Start Date"
+                    android:padding="@dimen/_5dp"
+                    android:textSize="@dimen/_12_sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_background">
+
+                <EditText
+                    android:id="@+id/enddate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:drawableRight="@drawable/date"
+                    android:gravity="center"
+                    android:hint="End Date"
+                    android:padding="@dimen/_5dp"
+                    android:textSize="@dimen/_12_sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/datesearch"
+                android:layout_width="@dimen/_30dp"
+                android:layout_height="@dimen/_30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/_5dp"
+                android:background="@drawable/search_black_bg" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:layout_marginRight="@dimen/_5dp"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@color/yellow_background"
+            android:padding="@dimen/_5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10dp"
+                android:text="Total Beans Earned"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12_sp" />
+
+            <TextView
+                android:id="@+id/beancount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12_sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/from"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text="From"
+                android:textSize="@dimen/_12_sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10_sp" />
+
+            <TextView
+                android:id="@+id/to"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text="To"
+                android:textSize="@dimen/_12_sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5dp"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_10_sp" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Comments Found"
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/txt_grid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150dp"
+                android:numColumns="2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/notext1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="No Post Found"
+
+                android:visibility="gone" />
+
+            <GridView
+                android:id="@+id/img_grid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

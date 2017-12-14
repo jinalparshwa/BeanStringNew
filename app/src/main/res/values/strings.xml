@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Beanstring</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_id">590485604340427</string>
+    <string name="google_plus">AIzaSyApLr_vszOfZa7BrPpfK2nAWVMXia70mq8</string>
+    <string name="banner_home_footer">ca-app-pub-7335014133239308/2531109829</string>
+    <!--<string name="app_id">658826824280349</string>-->
+</resources>
+

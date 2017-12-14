@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/login_green_color">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/_5dp"
+            android:src="@drawable/logo_white_new" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_120dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_5dp"
+            android:paddingLeft="@dimen/_15dp"
+            android:paddingRight="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:text="Mobile No."
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12_sp" />
+
+
+        <EditText
+            android:id="@+id/for_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter Mobile no"
+            android:inputType="number"
+            android:maxLength="10"
+            android:padding="@dimen/_10dp"
+            android:textSize="@dimen/_12_sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rr_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:background="@color/login_green_color">
+
+        <TextView
+            android:id="@+id/txtnext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_10dp"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15_sp" />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

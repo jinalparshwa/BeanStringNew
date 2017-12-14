@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50dp"
+        android:background="@color/login_green_color">
+
+
+        <ImageView
+            android:layout_width="@dimen/_60dp"
+            android:layout_height="@dimen/_60dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/white_logo" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20dp"
+        android:layout_marginRight="@dimen/_20dp"
+        android:layout_marginTop="@dimen/_120dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_5dp"
+            android:paddingLeft="@dimen/_15dp"
+            android:paddingRight="@dimen/_15dp"
+            android:paddingTop="@dimen/_15dp"
+            android:text="New Password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12_sp" />
+
+
+        <EditText
+            android:id="@+id/et_new"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter New Password"
+            android:padding="@dimen/_10dp"
+            android:inputType="textPassword"
+            android:textSize="@dimen/_12_sp" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15dp"
+            android:paddingRight="@dimen/_15dp"
+            android:paddingTop="@dimen/_10dp"
+            android:text="Confirm Password"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12_sp" />
+
+
+        <EditText
+            android:id="@+id/et_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5dp"
+            android:background="@drawable/edit_text_background"
+            android:hint="Enter Confirm Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/_10dp"
+            android:textSize="@dimen/_12_sp" />
+
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rr_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_20dp"
+        android:background="@color/login_green_color">
+
+        <TextView
+            android:id="@+id/txtlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:padding="@dimen/_10dp"
+            android:text="Change Password"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15_sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
