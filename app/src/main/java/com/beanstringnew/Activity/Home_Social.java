@@ -79,7 +79,6 @@ import bolts.AppLinks;
 
 public class Home_Social extends AppCompatActivity implements Thread.UncaughtExceptionHandler, Share {
 
-
     public static final String TEST_DEVICE_ID = "37D01A552DF761E149607CA81BBA69E4";
     Context context = this;
     // FrameLayout frame_home;
@@ -440,7 +439,7 @@ public class Home_Social extends AppCompatActivity implements Thread.UncaughtExc
                                 break;
                             }
                             case "4": {
-                               // DialogBox.alert_popup(context, res_msg);
+                                // DialogBox.alert_popup(context, res_msg);
                                 break;
                             }
                         }

@@ -589,6 +589,7 @@ public class Add_photo_activity extends AppCompatActivity {
         if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK && null != data) {
             // Get the Image from data
             uri = data.getData();
+            Log.e("uri", data.getData().toString());
 
             try {
                 path = getPath(uri);

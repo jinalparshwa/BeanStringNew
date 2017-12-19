@@ -280,7 +280,7 @@ public class Beans_Earned_fragment_new extends Fragment implements View.OnClickL
         //Beans_earned();
         startdate.setText("");
         enddate.setText("");
-        beancount.setText("");
+//        beancount.setText("");
         from.setText("");
         start.setText("");
         to.setText("");

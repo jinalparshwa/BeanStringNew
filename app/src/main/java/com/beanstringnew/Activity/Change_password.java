@@ -77,6 +77,7 @@ import com.facebook.share.widget.AppInviteDialog;
 import com.google.firebase.crash.FirebaseCrash;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.ByteArrayOutputStream;
@@ -391,9 +392,9 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
             }
         });
 
-        adapter2 = new ArrayAdapter<String>(context, R.layout.spinner_textview, Array_city);
-        adapter2.setDropDownViewResource(R.layout.spinner_textview);
-        spinner_city.setAdapter(adapter2);
+//        adapter2 = new ArrayAdapter<String>(context, R.layout.spinner_textview, Array_city);
+//        adapter2.setDropDownViewResource(R.layout.spinner_textview);
+//        spinner_city.setAdapter(adapter2);
 
         btnedit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -402,7 +403,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
             }
         });
         get_state_city();
-        get_college();
+        // get_college();
         beans_Count();
 
         IntentFilter intentFilter = new IntentFilter(
@@ -410,6 +411,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
         mReceiver = new Message_Receiver();
         registerReceiver(mReceiver, intentFilter);
         Myapplication.getInstance().trackScreenView("Change Password Screen");
+
     }
 
     @Override
@@ -678,12 +680,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
         user.setEmail((editemail.getText().toString().trim()));
         user.setMobile(editmobile.getText().toString().trim());
         user.setDate(editdob.getText().toString().trim());
-        for (Model_State_city modelcollege : array_clg) {
-            if (modelcollege.getCollege_name().equals(spinner_college.getSelectedItem())) {
-                user.setCname(modelcollege.getCollege_id());
-                Log.e("stateeeee_name", modelcollege.getCollege_name());
-            }
-        }
+
         // user.setCname(editclg.getText().toString().trim());
         for (Model_State_city modelstate : array) {
             if (modelstate.getState_name().equals(spinner_state.getSelectedItem())) {
@@ -695,6 +692,12 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
             if (modelstate.getCityname().equals(spinner_city.getSelectedItem())) {
                 user.setCity(modelstate.getCityid());
                 Log.e("cityyyyy_name", modelstate.getCityname());
+            }
+        }
+        for (Model_State_city modelcollege : array_clg) {
+            if (modelcollege.getCollege_name().equals(spinner_college.getSelectedItem())) {
+                user.setCname(modelcollege.getCollege_id());
+                Log.e("college_name", modelcollege.getCollege_name());
             }
         }
         if (img_status == 0) {
@@ -864,7 +867,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
 
                     if (res_flag.equals("200")) {
 
-                       // Toast.makeText(context, res_msg, Toast.LENGTH_SHORT).show();
+                        // Toast.makeText(context, res_msg, Toast.LENGTH_SHORT).show();
                         finish();
 
                     } else {
@@ -890,7 +893,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
 
     public void HTTP_API_getdata() {
 
-        obj_dialog.show();
+        // obj_dialog.show();
 
         String url = Configr.app_url + "getmyprofile";
 
@@ -905,7 +908,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
             @Override
             public void onResponse(String response) {
                 Log.e("Response", response);
-                obj_dialog.dismiss();
+                // obj_dialog.dismiss();
 
                 String toastMsg = "";
                 toastMsg = "";
@@ -970,8 +973,8 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
                         int selected_city = Array_cityid.indexOf(selectedcityid);
                         spinner_city.setSelection(selected_city);
 
-                        int selected_college = Array_college_id.indexOf(selectedcollege);
-                        spinner_college.setSelection(selected_college);
+//                        int selected_college = Array_college_id.indexOf(selectedcollege);
+//                        spinner_college.setSelection(selected_college);
 
                     } else {
                         DialogBox.alert_popup(context, res_msg);
@@ -987,7 +990,7 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
         Response.ErrorListener lis_error = new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                obj_dialog.dismiss();
+                //obj_dialog.dismiss();
                 Toast.makeText(context, "" + Configr.Message, Toast.LENGTH_SHORT).show();
             }
         };
@@ -1235,6 +1238,8 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
 
                         HTTP_API_getdata();
                         Spinner_state_change();
+                        //city_change();
+
 
                     } else {
                         DialogBox.alert_popup(context, res_msg);
@@ -1258,17 +1263,28 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
     }
 
 
-    public void get_college() {
+    public void get_college(int city_id) {
 
         obj_dialog.show();
 
         String url = Configr.app_url + "getcollege";
-        String json = "";
+        JSONObject jobj_loginuser = new JSONObject();
+        try {
 
-        // json = JSON.add_json(array, pref, "mybeans");
+            JSONObject jobj_row = new JSONObject();
+
+            jobj_row.put("cityid", city_id);
+
+            JSONArray jarray_loginuser = new JSONArray();
+            jarray_loginuser.put(jobj_row);
+
+            jobj_loginuser.put("getcollege", jarray_loginuser);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         HashMap<String, String> param = new HashMap<>();
-        param.put("data", json);
+        param.put("data", "" + jobj_loginuser.toString().replaceAll("\\\\", ""));
         Log.e("jinal", ":" + param.toString());
 
         Response.Listener<String> lis_pat = new Response.Listener<String>() {
@@ -1287,11 +1303,6 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
 
                         JSONArray jarray1 = new JSONArray(job.getString("college"));
                         array_clg.clear();
-
-                        Model_State_city model2 = new Model_State_city();
-                        model2.setCollege_id("0");
-                        model2.setCollege_name("Select College");
-                        array_clg.add(model2);
 
                         for (int i = 0; i < jarray1.length(); i++) {
                             Model_State_city model = new Model_State_city();
@@ -1314,8 +1325,14 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
                         adapter.setDropDownViewResource(R.layout.spinner_textview);
                         spinner_college.setAdapter(adapter);
 
-                        HTTP_API_getdata();
+
+                        int selected_college = Array_college_id.indexOf(selectedcollege);
+                        spinner_college.setSelection(selected_college);
+
+                        //  HTTP_API_getdata();
                         // Spinner_state_change();
+                        //city_change();
+
 
                     } else {
                         DialogBox.alert_popup(context, res_msg);
@@ -1367,6 +1384,9 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
                         int selected_city = Array_cityid.indexOf(selectedcityid);
                         spinner_city.setSelection(selected_city);
 
+
+                        city_change();
+
                     }
                 }
             }
@@ -1376,6 +1396,33 @@ public class Change_password extends AppCompatActivity implements Thread.Uncaugh
 
             }
         });
+    }
+
+    public void city_change() {
+        spinner_city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Array_college_id.clear();
+
+                for (Model_State_city model_state : array_clg) {
+                    Array_college_id.add(model_state.getCollege_id());
+
+                }
+                Log.e("city_jinallla", ":" + (i + 1));
+                int city_id = i + 1;
+
+
+                get_college(city_id);
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+
     }
 
     public void Check_old_password() {

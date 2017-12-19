@@ -100,7 +100,6 @@ public class Other_Profile_activity extends AppCompatActivity implements Thread.
     LinearLayout ll_follower;
     LinearLayout ll_following;
     TextView txt_block;
-
     Model_user model_user;
     CallbackManager callbackManager;
     AppInviteDialog appInviteDialog;
@@ -108,7 +107,6 @@ public class Other_Profile_activity extends AppCompatActivity implements Thread.
     public int GOOGLE_PLUS_REQUEST_CODE = 2;
     public int TWITTER_REQUEST_CODE = 3;
     TabLayout tabLayout;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -181,7 +179,6 @@ public class Other_Profile_activity extends AppCompatActivity implements Thread.
                 startActivity(i);
             }
         });
-
 
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);

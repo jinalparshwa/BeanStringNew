@@ -24,8 +24,8 @@ android {
         applicationId "com.beanstringnew"
         minSdkVersion 15
         targetSdkVersion 24
-        versionCode 35
-        versionName "1.0.34"
+        versionCode 36
+        versionName "1.0.35"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
